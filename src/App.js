@@ -1,7 +1,22 @@
+import GlobalStyle from './style/GlobalStyle'
+import { Container } from './style/styleApp'
+import Routes from './routes'
+
+import HeaderBar from './components/HeaderBar'
+import FooterBar from './components/Footerbar'
+
 
 function App() {
   return (
-    <div></div>
+    <Container>
+      <HeaderBar/>
+
+      <GlobalStyle/>
+
+      <Routes/>
+
+      <FooterBar/>
+    </Container>
   );
 }
 
