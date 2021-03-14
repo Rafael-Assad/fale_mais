@@ -5,5 +5,11 @@ export const Container = styled.div`
   width: 100vw;
   max-width: 100%;
 
-  border-color: #F6F6F6
+  border-color: #F6F6F6;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between
 `

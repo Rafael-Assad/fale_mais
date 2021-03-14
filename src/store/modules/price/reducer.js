@@ -1,6 +1,16 @@
 
+import { GETPRICE } from './actionsType'
 
-const priceReducer = () => {
+const priceReducer = (state=[], action) => {
+  switch(action.type){
+  case GETPRICE:
+    return state = action.price
+  
+  default:
+    return state
+
+}
+
 
 }
 

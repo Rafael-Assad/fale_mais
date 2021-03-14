@@ -8,7 +8,7 @@ import SignPlan from './pages/SignPlan'
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/' render={() => <Home/> } />
+      <Route path='/' component={Home} />
       
       <Route path='/Planos' render={() => <Plans/> } />
 

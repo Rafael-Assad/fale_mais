@@ -2,7 +2,12 @@ import { FooterContainer } from './style'
 
 const FooterBar = () => {
   return (
-    <FooterContainer></FooterContainer>
+    <FooterContainer>
+    <div className='upperFooter'>
+      mais coisas
+    </div>
+      <div className='lowFooter'>Creditos</div>
+    </FooterContainer>
   )
 }
 
