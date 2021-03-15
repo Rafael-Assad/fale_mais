@@ -6,7 +6,11 @@ export const HeaderContainer = styled.header`
 
   height: 100px;
 
+  margin-bottom: 60px;
+
   background-color: #aa0033;
+
+  border-bottom: 2px solid #CCC;
 
   display: flex;
   flex-direction: column;

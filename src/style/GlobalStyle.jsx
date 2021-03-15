@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
     font-size: 18px;
     font-family:'Heebo', sans-serif;
+    font-weight: 500;
   }
 `
 
