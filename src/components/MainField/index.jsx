@@ -1,8 +1,10 @@
 import { MainContainer } from './style'
 
-const MainField = () => {
+const MainField = ({children}) => {
   return (
-    <MainContainer></MainContainer>
+    <MainContainer>
+      {children}
+    </MainContainer>
   )
 }
 
