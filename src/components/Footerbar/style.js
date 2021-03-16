@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
   width: 100vw; 
   max-width: 100%;
 
-  height: 200px;
+  height: 15rem;
 
   background-color: #aa0033;
 
@@ -60,15 +60,40 @@ export const FooterContainer = styled.footer`
     }
 
     .infoBox{
-
       width:45%;
       height:100%;
-      border: 1px solid #000;
+      padding: 1.5rem 0;
+
+      color:#F6F6F6;
+
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between;
+      img{
+        width: 10rem;
+      }
+
+      span{
+        width: 100%; 
+        svg{
+          margin-left:2rem;
+          font-size: 1.5rem;
+        }
+      }
+
     }
   }
 
   .lowFooter{
+    height: 2rem;
+    color:#F6F6F6;
     background-color: #67001f;
+
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
 `

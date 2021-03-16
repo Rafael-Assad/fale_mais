@@ -10,11 +10,11 @@ export const HeaderContainer = styled.header`
 
   background-color: #aa0033;
 
-  border-bottom: 2px solid #CCC;
+  border-bottom: 2px solid #ccc;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-space-between;
+  justify-content: space-between;
 
   .topHeader {
     width: 100vw;
@@ -22,7 +22,16 @@ export const HeaderContainer = styled.header`
     height: 30px;
 
     background-color: #67001f;
-    z-index:9;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+      color: #f6f6f6;
+      font-size: 0.8rem;
+      margin-right: 2.5rem;
+    }
   }
 
   .bottomHeader {
@@ -38,11 +47,10 @@ export const HeaderContainer = styled.header`
     img {
       width: 80px;
     }
-
   }
 
-  .iconeMenu{
-    color: #F6F6F6  ;
+  .iconeMenu {
+    color: #f6f6f6;
 
     position: absolute;
     right: 33%;
@@ -53,27 +61,26 @@ export const HeaderContainer = styled.header`
     z-index: 10;
   }
 
-  button{
+  button {
     margin-right: 1rem;
   }
 
-  @media screen and (min-width: 768px){
-    .iconeMenu{
-      display: none
+  @media screen and (min-width: 768px) {
+    .iconeMenu {
+      display: none;
     }
-    
   }
-`
+`;
 
 export const NavContainer = styled.nav`
   position: absolute;
-  top:0;
+  top: 0;
 
   ul {
     width: 100vw;
-    height:100vh;
+    height: 100vh;
 
-    padding-top:5rem;
+    padding-top: 5rem;
     list-style: none;
     display: flex;
     align-items: center;
@@ -83,38 +90,40 @@ export const NavContainer = styled.nav`
     background-color: #aa0033;
 
     position: fixed;
-    top:0;
+    top: 0;
 
-    clip-path: circle(${props => props.visible ? '100px': '1000px'} at 80% -20%);
+    clip-path: circle(
+      ${(props) => (props.visible ? "100px" : "1000px")} at 80% -20%
+    );
     -webkit-clip-path: circle(
-      ${props => props.visible ? '100px': '1000px'} at 80% -20%);
+      ${(props) => (props.visible ? "100px" : "1000px")} at 80% -20%
+    );
     transition: all 1s ease-out;
 
-    pointer-events:${ props => props.visible? 'none': 'all'};
+    pointer-events: ${(props) => (props.visible ? "none" : "all")};
 
-    li{
+    li {
       width: 100%;
       height: 5rem;
       padding-top: 2rem;
-      color: #F6F6F6 ;
+      color: #f6f6f6;
       text-align: center;
-      a{
+      a {
         text-decoration: none;
-        color:inherit;
+        color: inherit;
       }
     }
-    
 
-    li:active{
-      background-color:#67001f;
+    li:active {
+      background-color: #67001f;
     }
   }
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     position: static;
-    ul{
+    ul {
       width: 50vw;
-      height:50%;
+      height: 50%;
 
       padding: 0;
 
@@ -125,12 +134,10 @@ export const NavContainer = styled.nav`
 
       pointer-events: all;
 
-      li{
-      height: 2.5rem;
-      padding-top: 0.5rem;
+      li {
+        height: 2.5rem;
+        padding-top: 0.5rem;
+      }
     }
-    }
-
   }
-
-`
+`;

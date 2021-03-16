@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -12,8 +12,7 @@ const SignForm = () => {
       .string()
       .required('Campo Obrigatório!')
       .min(6, 'Por favor, Informe o nome completo!')
-      .matches(/^[a-z]+$/, 'Formato inválido')
-      ,
+      .matches(/^[a-z]+$/, 'Formato inválido'),
     'address': yup
       .string()
       .required('Campo Obrigatório!')
@@ -25,11 +24,12 @@ const SignForm = () => {
     'cpf':yup
       .string()
       .required('Campo Obrigatório!')
-      .matches(/^\d{3}\.?\d{3}\.?\d{3}\-?\d{2}$/, 'CPF invalido!'),
+      .matches(/^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/, 'CPF invalido!'),
     'plan':yup
       .string()
       .required('Escolha um Plano!')
   });
+
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });

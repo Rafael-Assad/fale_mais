@@ -35,7 +35,8 @@ const HeaderBar = () => {
   return (
     <HeaderContainer>
       <div className="topHeader">
-        Aqui
+        
+        <p>Televendas: XXXX-XXXX</p>
       </div>
 
       <div className="bottomHeader">

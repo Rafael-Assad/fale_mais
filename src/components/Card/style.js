@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
   width: 20rem;
   max-width: 90vw;
-  height: 17rem;
+  min-height: 17rem;
 
   padding: 2.5rem;
   margin-top: 5rem;
@@ -28,4 +28,16 @@ export const CardContainer = styled.div`
     font-size: 0.9rem;
   }
 
+  @media screen and (min-width: 768px) {
+    h2{
+    font-size: 1.7rem;
+    margin-bottom:1rem;
+  }
+  li{
+    font-size: 0.75rem;
+
+    margin-bottom:0.5rem;
+  }
+    width: 12.7rem;
+  }
 `
