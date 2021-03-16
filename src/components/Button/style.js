@@ -11,6 +11,11 @@ export const ButtonContainer = styled.button`
   background-color: ${props => props.bgColor};
   color: ${props => props.textColor};
 
-  cursor: pointer
+  cursor: pointer;
+
+  :active{
+    background-color: ${props => props.bgColor + 'AA'};
+  color: ${props => props.textColor};
+  }
   
 `

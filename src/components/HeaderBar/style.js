@@ -45,12 +45,16 @@ export const HeaderContainer = styled.header`
     color: #F6F6F6  ;
 
     position: absolute;
-    right: 25%;
-    top: 50%;
+    right: 33%;
+    top: 55%;
 
     transform: translate(-25%, -50%);
     cursor: pointer;
     z-index: 10;
+  }
+
+  button{
+    margin-right: 1rem;
   }
 
   @media screen and (min-width: 768px){
@@ -94,6 +98,10 @@ export const NavContainer = styled.nav`
       padding-top: 2rem;
       color: #F6F6F6 ;
       text-align: center;
+      a{
+        text-decoration: none;
+        color:inherit;
+      }
     }
     
 

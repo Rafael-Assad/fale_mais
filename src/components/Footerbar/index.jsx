@@ -1,6 +1,12 @@
+import { useHistory } from 'react-router-dom'
+
 import { FooterContainer } from "./style";
 import Button from "../Button";
+
+
 const FooterBar = () => {
+  const history = useHistory()
+  
   return (
     <FooterContainer>
       <div className="upperFooter">
@@ -8,7 +14,7 @@ const FooterBar = () => {
           <Button 
             bgColor ='#F6F6F6'
             textColor ='#67001f'
-            // clickAction={}
+            clickAction={() => history.push('/Assinatura')}
 
           >Contate-nos</Button>
           <div>

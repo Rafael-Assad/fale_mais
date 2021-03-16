@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import { Link, useHistory } from 'react-router-dom'
+
 import logo from "../../assets/imgs/logo.png";
 import { HeaderContainer, NavContainer } from "./style";
 import Button from "../Button";
@@ -6,6 +8,7 @@ import {TiThMenu} from 'react-icons/ti'
 
 
 const HeaderBar = () => {
+  const history = useHistory()
 
   let [toggleMenu, setToogleMenu] = useState('')
   let [visibel, setVisible] = useState(true)
@@ -44,18 +47,32 @@ const HeaderBar = () => {
         <NavContainer visible={visibel}>
 
           <ul className={toggleMenu} >
-            <li>Home</li>
-            <li>Planos</li>
-            <li>Assinatura</li>
+            <li>
+              <Link to='/' onClick={handleToggleMenu}>
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link to='/Planos' onClick={handleToggleMenu}>
+                Planos
+              </Link>
+            </li>
+
+            <li>
+              <Link to='/Assinatura' onClick={handleToggleMenu}>
+                Assinatura
+              </Link>
+            </li>
           </ul>
         </NavContainer>
 
         <Button
           bgColor="#F6F6F6"
           textColor="#67001F"
-          clickAction={() => console.log("foi")}
+          clickAction={() => history.push('/Assinatura')}
         >
-          Clique aqui
+          Assine Agora!
         </Button>
       </div>
     </HeaderContainer>

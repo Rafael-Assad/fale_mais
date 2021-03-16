@@ -34,8 +34,4 @@ export const FormFieldContainer = styled.div`
     border-radius:0.4rem;
   }
 
-  #noPlan, #withPlan{
-    background-color: #fff;
-    box-shadow:none;
-  }
 `
