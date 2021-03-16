@@ -9,5 +9,5 @@ export const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 `

@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     font-family:'Heebo', sans-serif;
     font-weight: 500;
   }
+
+  body{
+    background-color: #f6f6f6;
+  }
 `
 
 export default GlobalStyle
