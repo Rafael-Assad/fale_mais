@@ -10,19 +10,25 @@ const SignForm = () => {
   const schema = yup.object().shape({
     'fullName':yup
       .string()
-      .required('Campo Obrigatório'),
+      .required('Campo Obrigatório!')
+      .min(6, 'Por favor, Informe o nome completo!')
+      .matches(/^[a-z]+$/, 'Formato inválido')
+      ,
     'address': yup
       .string()
-      .required('Campo Obrigatório'),
+      .required('Campo Obrigatório!')
+      .matches(/^[a-z]+$/, 'Formato inválido'),
     'city': yup
       .string()
-      .required('Campo Obrigatório'),
+      .required('Campo Obrigatório!')
+      .matches(/^[a-z]+$/, 'Formato inválido'),
     'cpf':yup
       .string()
-      .required('Campo Obrigatório'),
+      .required('Campo Obrigatório!')
+      .matches(/^\d{3}\.?\d{3}\.?\d{3}\-?\d{2}$/, 'CPF invalido!'),
     'plan':yup
       .string()
-      .required('Campo Obrigatório')
+      .required('Escolha um Plano!')
   });
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),

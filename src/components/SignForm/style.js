@@ -39,4 +39,15 @@ export const FieldContainer = styled.div`
 
     border-radius:0.4rem;
   }
+
+  .error{
+    width: 100%;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    margin-top:0.5rem;
+
+    color: #fff;
+
+    background-color: #f00;
+  }
 `
